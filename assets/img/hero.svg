@@ -1,0 +1,26 @@
+<!-- DEMO PLACEHOLDER. CLIENT TODO: Replace with a real security guard hero photo (recommended 1920x1280, .jpg). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15151a"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#c8102e" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#c8102e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <!-- abstract guard silhouette -->
+  <g fill="#0c0c10" opacity=".9">
+    <ellipse cx="1080" cy="360" rx="150" ry="160"/>
+    <path d="M840 1000 C840 720 940 560 1080 560 C1220 560 1320 720 1320 1000 Z"/>
+  </g>
+  <g fill="#1c1c22">
+    <ellipse cx="1080" cy="360" rx="120" ry="130"/>
+  </g>
+  <text x="1080" y="520" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="800" font-size="42" fill="#d4a437" letter-spacing="6">BRAVO</text>
+  <text x="1080" y="565" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="700" font-size="24" fill="#8a8a95" letter-spacing="8">SECURITY</text>
+  <text x="60" y="960" font-family="Arial, sans-serif" font-size="22" fill="#3a3a44">DEMO PLACEHOLDER — replace assets/img/hero.svg</text>
+</svg>

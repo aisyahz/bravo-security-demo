@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node (only used by the optional local preview helper)
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
