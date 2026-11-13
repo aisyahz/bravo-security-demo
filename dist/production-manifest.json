@@ -1,0 +1,162 @@
+{
+  ".htaccess": {
+    "bytes": 368,
+    "sha256": "7ebda942415b9fe3c6a9277f9b83fff43453c869db62e23f75c9bc1d7a44d69b"
+  },
+  "index.html": {
+    "bytes": 24357,
+    "sha256": "5cc83c6a070de28964081c7e0650fb7a3b906453caa5a8f01c6a6287162f56a1"
+  },
+  "about.html": {
+    "bytes": 10141,
+    "sha256": "e6c4b92df0a1f3968b6884991dc639baba0b90159c4889f4a874167e0d30119d"
+  },
+  "services.html": {
+    "bytes": 26471,
+    "sha256": "65b44d4e65d1898f6bacbe063ecab1a71921833e91d2d9d08d5fcff794bee4a1"
+  },
+  "operations.html": {
+    "bytes": 567,
+    "sha256": "0514fad40cc30e3fb50407230e689687449870ea38406790ce1028e0ab7bb87c"
+  },
+  "contact.php": {
+    "bytes": 17359,
+    "sha256": "fe081f349ef985d0f409c08488a1570ca29b8d425220b6b7f85e5d6d68298c7e"
+  },
+  "sitemap.xml": {
+    "bytes": 388,
+    "sha256": "9b989d9b7373eeb55e708885c84bdd08f4ba199f4d593dc6b2686aaf3a5b7353"
+  },
+  "includes/contact-security.php": {
+    "bytes": 3008,
+    "sha256": "20b8d4ef6d02c6e4386185d8d06c8ea50b0c10fce2c4b1d34bdb6fe002a3f137"
+  },
+  "includes/.htaccess": {
+    "bytes": 19,
+    "sha256": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934"
+  },
+  "assets/css/style.css": {
+    "bytes": 75681,
+    "sha256": "e4c9f83493c9157c1690d51b0c970a7590e1507343c511e0a0c8ddcd46d33814"
+  },
+  "assets/js/main.js": {
+    "bytes": 12318,
+    "sha256": "1bb4541a0a91bab558ded842a52dfaadeb15e5b5a9e53dd19ef4b1e287a079b5"
+  },
+  "assets/icons/lucide.svg": {
+    "bytes": 3944,
+    "sha256": "1653dde28ec799a29e07b2a9fa7165ab02e0f2a914a68a2f98a4191c63070427"
+  },
+  "assets/icons/LICENSE": {
+    "bytes": 3208,
+    "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+  },
+  "assets/img/bravo-logo-104.png": {
+    "bytes": 16862,
+    "sha256": "3ca39a2add9456bda05acc03e83d3e4457afeaca70991bfd4c83a8cc8028ed89"
+  },
+  "assets/img/favicon-32.png": {
+    "bytes": 2289,
+    "sha256": "e1dfc67b4cb88aae51692d38855c87b553be801cfc62eeabc8b51864cda85b5c"
+  },
+  "assets/img/apple-touch-icon.png": {
+    "bytes": 42812,
+    "sha256": "be124d7decdc87ba2644991632a4421516af2331059e226815d51231e449cc43"
+  },
+  "assets/img/security-entrance.webp": {
+    "bytes": 61894,
+    "sha256": "29e63a9f0c8317e47d75040b99e3f380e8349bd06693c4b6e0c8cae76b0ad3d6"
+  },
+  "assets/img/industrial-facility-patrol.webp": {
+    "bytes": 105110,
+    "sha256": "7c5e602f209f144846666527bdd13df7dd765eb289689aee6558ed97e8bec6b2"
+  },
+  "assets/img/security-team.webp": {
+    "bytes": 106066,
+    "sha256": "c5f13d509d9385c883ae37c4466e6cd84792c63641aea110841cab5a0c34c24f"
+  },
+  "assets/img/visitor-welcome.webp": {
+    "bytes": 65438,
+    "sha256": "60a7a7c8a20d02fdae8b26c5370969c459f75c38902c5adb482b67680126e9cc"
+  },
+  "assets/img/urban-security-patrol.webp": {
+    "bytes": 86600,
+    "sha256": "ced8332a4bfd0fb6983764676695bcdaa613227c3aed1f81c2c01af71989dbfa"
+  },
+  "assets/img/security-control-room.webp": {
+    "bytes": 97300,
+    "sha256": "f926bcffe7d567b5b2ba821014d20058251cb009b911ce4d45995be9795645f7"
+  },
+  "assets/img/hero.svg": {
+    "bytes": 1525,
+    "sha256": "e814ba4f4e700cefd3dbfd4e9c9137c389bfd93429074e25e2bc007672fce2dc"
+  },
+  "assets/images/hero-security.webp": {
+    "bytes": 103652,
+    "sha256": "a30bdd7a1db5d38c44dee0b1ce8e6081f97908702c3fa36ca57a846e02b182e0"
+  },
+  "assets/images/hero-security-mobile.webp": {
+    "bytes": 70884,
+    "sha256": "e73bdc475a1c621a58b31eec4d4c1dba1fc2a00264ed980e3df2819a74f1792d"
+  },
+  "assets/images/armed-guard.webp": {
+    "bytes": 81488,
+    "sha256": "e56aa6520963f6cbc43a1d36cc14cbe398476123a4d870125bdc8848532c0243"
+  },
+  "assets/images/cctv-monitoring.webp": {
+    "bytes": 99188,
+    "sha256": "7a1d2d2342846877cc2f94904db77d94579ce1d981694d85bbf386a5d4add1b8"
+  },
+  "assets/images/entrance-security.webp": {
+    "bytes": 63626,
+    "sha256": "9efad4ba0762dbb842b5e0bc9d8cf762877f228c598588196518a720a3ff3f75"
+  },
+  "assets/images/industrial-security.webp": {
+    "bytes": 87046,
+    "sha256": "50296967cbe1fbf3bb284616cbcf5dcc978075b150ce2fc63d6014cdbbdc2e9d"
+  },
+  "assets/images/k9-security.webp": {
+    "bytes": 145508,
+    "sha256": "1d37d26ea053d964b7dfab593dcc7db680a870f89a852013adc7489f16af0858"
+  },
+  "assets/images/kuala-lumpur-skyline.webp": {
+    "bytes": 190458,
+    "sha256": "4157e1f7bb32962d06aaeb2ce6d728967cac3a2e6c6f04356d5e3292a3d22955"
+  },
+  "assets/images/mobile-escort.webp": {
+    "bytes": 78870,
+    "sha256": "549ab22f7f0f7c06cc166c069ca02bc20f19829e8991b8b0fd55f6e7aad5252a"
+  },
+  "assets/images/mobile-patrol.webp": {
+    "bytes": 93980,
+    "sha256": "36be7a8a3873f47cdf7c61dad31f0abcace64588ed18fa915d08ebfac0f30723"
+  },
+  "assets/images/operations-team.webp": {
+    "bytes": 98272,
+    "sha256": "350dd8bafa4c54fa6fb7bdd962630b79c03f2dc4fd38fb92bd28a9f05342a284"
+  },
+  "assets/images/visitor-assistance.webp": {
+    "bytes": 57602,
+    "sha256": "79107838655ba39db59cf8b6f896db8a7258b45e26ee67c56643023e89c98d33"
+  },
+  "assets/images/bodyguard.webp": {
+    "bytes": 82966,
+    "sha256": "0ecac1aab7a86d1d431ec87e2eef8de120c397b8d797d961ad40557a04b43f50"
+  },
+  "assets/images/event-security.webp": {
+    "bytes": 87548,
+    "sha256": "f9bb76c8fd315f25936f2089676e78d89b3ca2724bc98267d220c64a5134302f"
+  },
+  "assets/images/cash-in-transit.webp": {
+    "bytes": 87490,
+    "sha256": "bbdca579562c3cdce0f106f04f51ba3ee70cf76d484c5e84ebfcd2ce85004eb5"
+  },
+  "assets/images/corporate-security.webp": {
+    "bytes": 86050,
+    "sha256": "8556dced24655d9152f8848ee17f2449e81b87d1fa3a54a1c289c2761441dcc0"
+  },
+  "assets/images/social-preview.jpg": {
+    "bytes": 107376,
+    "sha256": "54c6dc3da6de3aeef75def3608c0279d666ee33d80c1a630a8d8d109bb345db7"
+  }
+}

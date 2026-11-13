@@ -14,6 +14,7 @@ var types = {
   ".json": "application/json",
   ".jpg": "image/jpeg",
   ".png": "image/png",
+  ".webp": "image/webp",
   ".ico": "image/x-icon"
 };
 
@@ -22,6 +23,10 @@ http.createServer(function (req, res) {
   if (urlPath === "/") urlPath = "/index.html";
   var filePath = path.join(root, urlPath);
   if (!filePath.startsWith(root)) { res.writeHead(403); return res.end("Forbidden"); }
+  if (path.extname(filePath).toLowerCase() === ".php") {
+    res.writeHead(501, { "Content-Type": "text/plain; charset=utf-8" });
+    return res.end("PHP is required to run this page. Start the PHP development server instead.");
+  }
 
   fs.readFile(filePath, function (err, data) {
     if (err) { res.writeHead(404); return res.end("Not found: " + urlPath); }

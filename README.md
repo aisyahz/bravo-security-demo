@@ -1,97 +1,29 @@
-# Bravo Security Network Sdn Bhd — One-Page Website (DEMO)
+﻿# Bravo Security Network website
 
-A lightweight, static, single-page corporate landing site. No build tools, no
-backend, no database. Just HTML, CSS and vanilla JS — ready to upload to iWHOST
-hosting when approved.
+Four substantive pages: Home (`index.html`), About (`about.html`), Services and Operations (`services.html`, 12 services), and Contact (`contact.php`). `operations.html` redirects legacy links. HTML, CSS, vanilla JavaScript and PHP; no production build dependencies.
 
-> **This is a DEMO.** Content marked `CLIENT TODO` and statistics shown as
-> `XX+` / `XXX+` are placeholders awaiting confirmed information.
+This is a local staging candidate, not an approved live release. WordPress has not been changed. Read `CLIENT-APPROVALS.md`, `DEPLOYMENT.md` and `READINESS.md` before handover.
 
----
+## Local preview
 
-## File structure
+From the project directory, run `.local-tools/php/php.exe -S 127.0.0.1:5500 -t .`, then open http://127.0.0.1:5500/. The PHP runtime is a local tool and is never packaged. Static-only preview tools cannot process enquiries. Local preview does not prove email delivery. Do not expose the development server publicly.
 
-```
-Bravo/
-├─ index.html              All page sections + SEO meta tags
-├─ README.md               This file
-└─ assets/
-   ├─ css/style.css        Design system (colors, type) + responsive layout
-   ├─ js/main.js           Nav, smooth scroll, active link, reveal, form (demo)
-   └─ img/
-      ├─ logo.svg          Temporary logo mark      (CLIENT TODO: replace)
-      ├─ favicon.svg        Browser tab icon         (CLIENT TODO: replace)
-      ├─ hero.svg          Hero background placeholder (CLIENT TODO: replace)
-      └─ about.svg         About image placeholder    (CLIENT TODO: replace)
-```
+## Contact form
 
----
+Requires PHP 8.0+ syntax, sessions, random_bytes, JSON, flock and a configured mail transport. Use a currently supported PHP version provided by IWHost; local tests use PHP 8.4.27. Server-side validation, CSRF, honeypot, escaped errors, session cooldown and atomic cross-session throttling are enabled.
 
-## How to preview locally
+Limits: 10 POST attempts per address per 15 minutes, 5 mail attempts per address per hour, plus site-wide 300 POST / 50 mail attempts per hour. Failed transport attempts count. Shared-office users share a limit; WhatsApp and email remain alternatives. Limits apply to REMOTE_ADDR, never untrusted forwarding headers. Ask the host to restore the true client address for trusted proxies.
 
-You only need a browser. Two options:
+The JSON throttle store defaults to an application-specific directory under the PHP system temp directory, outside the website root. It contains a random salt, HMAC address identifiers and timestamps, not enquiry contents. Old buckets are pruned on subsequent requests. Configure BRAVO_RATE_LIMIT_DIR to a private persistent directory outside every public document root if the host clears temp frequently or requires it for open_basedir. Keep it writable only by the PHP account. Corrupt/unwritable storage blocks submissions with an accurate error, not success. Multiple web servers require shared lock-compatible storage or host-level throttling.
 
-**Option A — double click**
-Open `index.html` directly in your browser. Everything works except the
-Google Fonts require internet.
+A success response means PHP mail transport accepted the enquiry for sending. It does not prove inbox delivery. Mailbox receipt, spam handling and sender-domain authentication must be tested on staging.
 
-**Option B — local server (recommended, matches hosting)**
-From this folder, run one of:
+## Assets and interaction
 
-```powershell
-# If you have Python installed
-python -m http.server 5500
-```
+Official logo and original hero images are retained unchanged. Smaller PNG logo/favicon derivatives preserve the artwork. Published photographs use WebP, the About section uses the Kuala Lumpur skyline, and the five-image operations lightbox supports keyboard controls. Abstract information panels are not presented as client-site photographs. Lucide icons are self-hosted with their licence. IntersectionObserver animations respect reduced-motion preferences.
 
-Then open: http://localhost:5500
+## Tests and packaging
 
-(If you use VS Code, the "Live Server" extension also works — right-click
-`index.html` → "Open with Live Server".)
+Set PLAYWRIGHT_PATH to the installed Playwright package, then run `node tests/ux-check.cjs`, `node tests/security-check.cjs` and `node tests/hero-check.cjs` using Node 22. These local scripts use Chrome and the local PHP executable; security tests intercept SMTP without sending external mail. The hero check uses the preview on port 5500. Results and screenshots are under tests/artifacts and are excluded from distribution.
 
----
-
-## Confirmed business details currently used
-
-| Field   | Value |
-|---------|-------|
-| Company | Bravo Security Network Sdn Bhd |
-| Website | https://bravosecuritynetwork.com.my/ |
-| Phone   | 03-9226 9786 (used for Call + WhatsApp + email links) |
-| Address | Tingkat 4, Blok G, Excella Business Park, Jalan Ampang Putra, Taman Ampang Hilir, 55100 Kuala Lumpur, Selangor |
-
-## NOT confirmed — do NOT publish until client supplies
-
-- KDN licence number
-- WhatsApp number (currently reuses the office line as a placeholder)
-- Email address (currently `info@bravosecuritynetwork.com.my` placeholder)
-- Statistics: years / trained personnel / clients (`XX+`, `XXX+`)
-- Coverage claim (e.g. "Nationwide")
-- Real client names / logos + permission to display
-- Social media links (Facebook / LinkedIn / Instagram)
-- Exact brand red & gold hex values
-- Real photography (hero, about, services, clients)
-
----
-
-## Where to edit things
-
-- **Business details / links:** search `index.html` for `CLIENT TODO`.
-- **Phone / WhatsApp / email:** update the `tel:`, `wa.me` and `mailto:` links
-  in `index.html` (Hero, Contact and Footer). Also `TO_EMAIL` in
-  `assets/js/main.js`.
-- **Statistics:** the "Statistics strip" section in `index.html`
-  (elements with `data-field="..."`).
-- **Brand colors:** the `:root` tokens at the top of `assets/css/style.css`
-  (`--red`, `--gold`).
-- **Images:** drop real files into `assets/img/` and update the paths in
-  `index.html` (about image) and `assets/css/style.css` (hero background).
-
----
-
-## Notes on the contact form
-
-The form is a working UI but has **no backend** in this demo. On submit it
-validates and opens the visitor's email client (mailto fallback). When you're
-ready to receive submissions on the live site, wire it to a service such as
-Formspree — this is out of the current RM400 scope and can be quoted separately.
-```
+Run `python tools/build-production.py` with Python 3.9+ to create `dist/Bravo-Production.zip` and its SHA-256 manifest. The explicit 41-file allowlist excludes tools, tests, runtime binaries, dependencies, source PNG photographs, backups, docs and secrets. Do not upload the older `bravo-latest.zip`: it includes local development tools. Deployment instructions are in DEPLOYMENT.md.
